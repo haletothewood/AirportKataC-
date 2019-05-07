@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirportKata", "AirportKata\AirportKata.csproj", "{0458B279-5F30-4CEC-8355-FE69A161F13D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirportKataTests", "AirportKataTests\AirportKataTests.csproj", "{2C7D4B54-E900-4E0D-8249-37B6E3FDCBF8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0458B279-5F30-4CEC-8355-FE69A161F13D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0458B279-5F30-4CEC-8355-FE69A161F13D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0458B279-5F30-4CEC-8355-FE69A161F13D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C7D4B54-E900-4E0D-8249-37B6E3FDCBF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C7D4B54-E900-4E0D-8249-37B6E3FDCBF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C7D4B54-E900-4E0D-8249-37B6E3FDCBF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C7D4B54-E900-4E0D-8249-37B6E3FDCBF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

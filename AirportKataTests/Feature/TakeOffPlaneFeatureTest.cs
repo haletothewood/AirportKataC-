@@ -5,7 +5,7 @@ using NUnit.Framework;
 namespace AirportKataTests.Feature
 {
     [TestFixture]
-    class LandPlaneFeatureTest
+    class TakeOffPlaneFeatureTest
     {
         public Mock<IHanger> _hangerMock;
         public Mock<IWeather> _weatherMock;
@@ -20,19 +20,19 @@ namespace AirportKataTests.Feature
         }
 
         [Test]
-        public void WhenAPlaneIsInstructedToLandAtAnAirport_ThenItLandsAsTheAirport()
+        public void WhenAPlaneIsInstructedToTakeOffFromAnAirport_ThenItTakesOff()
         {
             // assemble
             Mock<IPlane> _planeMock = new Mock<IPlane>();
-            _planeMock.Setup(x => x.IsFlying).Returns(true);
+            _planeMock.Setup(x => x.IsFlying).Returns(false);
             _weatherMock.Setup(x => x.IsStormy()).Returns(false);
 
             // act
-            _airport.Land(_planeMock.Object);
+            _airport.TakeOff(_planeMock.Object);
 
             // assert
-            _planeMock.Verify(x => x.Land());
-            _hangerMock.Verify(x => x.Store(_planeMock.Object));
+            _planeMock.Verify(x => x.TakeOff());
+            _hangerMock.Verify(x => x.Release(_planeMock.Object));
         }
     }
 }

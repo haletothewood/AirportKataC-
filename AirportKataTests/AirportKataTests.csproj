@@ -70,6 +70,7 @@
   <ItemGroup>
     <Compile Include="AirportShould.cs" />
     <Compile Include="Feature\LandPlaneFeatureTest.cs" />
+    <Compile Include="Feature\TakeOffPlaneFeatureTest.cs" />
     <Compile Include="HangerShould.cs" />
     <Compile Include="PlaneShould.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

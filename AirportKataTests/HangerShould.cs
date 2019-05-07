@@ -2,6 +2,7 @@
 using Moq;
 using NUnit.Framework;
 using Shouldly;
+using System;
 
 namespace AirportKataTests
 {
@@ -34,6 +35,18 @@ namespace AirportKataTests
             }
 
             _hanger.IsFull().ShouldBe(true);
+        }
+
+        [Test]
+        public void ShouldNotReleaseAPlaneThatIsntThere()
+        {
+            _hanger = new Hanger();
+            _planeMock = new Mock<IPlane>();
+            Mock<IPlane> _planeMock2 = new Mock<IPlane>();
+
+            _hanger.Store(_planeMock.Object);
+
+            Should.Throw<Exception>(() => _hanger.Release(_planeMock2.Object)).Message.ShouldBe("That plane is not here");
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace AirportKata
 {
@@ -24,7 +25,15 @@ namespace AirportKata
 
         public void Release(IPlane plane)
         {
-            _planes.Remove(plane);
+            if (_planes.Contains(plane))
+            {
+                _planes.Remove(plane);
+            }
+            else
+            {
+                throw new Exception("That plane is not here");
+            }
+
         }
     }
 }
